@@ -1,0 +1,67 @@
+{
+  "name": "starter_kit",
+  "description": "A Next.js starter that includes all you need to build amazing projects",
+  "version": "1.0.0",
+  "private": true,
+  "author": "darlington gospel<darlingtongospel@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "nextjs",
+    "starter",
+    "typescript"
+  ],
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export",
+    "lint": "next lint",
+    "format": "prettier --ignore-path .gitignore \"pages/**/*.+(ts|js|tsx)\" --write",
+    "postinstall": "husky install",
+    "launch": "npx esrun ./scripts/1_deploy.ts && npx esrun ./scripts/2_ata.ts && npx esrun ./scripts/3_metadata.ts && npx esrun ./scripts/4_mint.ts && npx esrun ./scripts/5_disable.ts"
+  },
+  "lint-staged": {
+    "./src/**/*.{ts,js,jsx,tsx}": [
+      "yarn lint --fix",
+      "yarn format"
+    ]
+  },
+  "dependencies": {
+    "@metaplex-foundation/mpl-token-metadata": "2",
+    "@reduxjs/toolkit": "2.2.6",
+    "@solana/spl-token": "0.4.6",
+    "@solana/wallet-adapter-base": "0.9.23",
+    "@solana/wallet-adapter-react": "0.15.35",
+    "@solana/wallet-adapter-react-ui": "0.9.35",
+    "@solana/wallet-adapter-wallets": "0.19.32",
+    "@solana/web3.js": "1.93.1",
+    "@types/node": "20.5.9",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "10.4.15",
+    "bs58": "6.0.0",
+    "dotenv": "16.4.5",
+    "eslint": "8.48.0",
+    "eslint-config-next": "13.4.19",
+    "lokijs": "^1.5.12",
+    "next": "13.4.19",
+    "pino-pretty": "^10.2.0",
+    "postcss": "8.4.29",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "react-identicons": "^1.2.5",
+    "react-loading-skeleton": "3.4.0",
+    "react-redux": "9.1.2",
+    "react-toastify": "10.0.5",
+    "sharp": "^0.32.6",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "esrun": "3.2.26",
+    "husky": "8.0.3",
+    "lint-staged": "15.2.0",
+    "typechain": "^8.3.1"
+  }
+}
