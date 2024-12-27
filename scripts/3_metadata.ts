@@ -16,11 +16,12 @@ const connection = new Connection(clusterApiUrl('devnet'))
 const setupTokenMetadata = async (tokenMint: PublicKey, OWNER: Keypair) => {
   const TOKEN_METADATA_PROGRAM_ID = new PublicKey('metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s')
 
+  // TODO: OneDoc and ODOC are only for the test nets
   const metadataData = {
-    name: 'Tokenizer Coin v2',
-    symbol: 'TKC',
+    name: 'OneDoc',
+    symbol: 'ODOC',
     // Arweave / IPFS / Pinata etc link using metaplex standard for off-chain data
-    uri: 'https://dappmentors.org',
+    uri: 'https://onedoc.com',
     sellerFeeBasisPoints: 0,
     creators: null,
     collection: null,
